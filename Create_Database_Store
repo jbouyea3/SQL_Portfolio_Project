@@ -1,0 +1,22 @@
+CREATE TABLE nike (id INTEGER PRIMARY KEY,shoes TEXT,price INTEGER,size INTEGER, category TEXT,sex TEXT);
+
+INSERT INTO nike VALUES (1,"Jordan",150,11,"Sneaker","Male");
+INSERT INTO nike VALUES (2,"Jordan",120,9,"Sneaker","Female");
+INSERT INTO nike VALUES (3,"Kd",90,10.5,"Basketball","Male");
+INSERT INTO nike VALUES(4,"Kd",90,8,"Basketball","Feamle");
+INSERT INTO nike VALUES (5,"Kyrie",100,12,"Baketball","Male");
+INSERT INTO nike VALUES (6,"Dunks", 180,11,"Casual","Male");
+INSERT INTO nike VALUES (7,"Dunks",180,11,"Casual","Male");
+INSERT INTO nike VALUES (8,"Jordan",210,9,"Sneaker","Male");
+INSERT INTO nike VALUES (9,"Jordan",185,11,"Sneakers","Male");
+INSERT INTO nike VALUES (10,"Crocs",65,7,"Casual","Female");
+INSERT INTO nike VALUES (11,"Crocs",65,8.5,"Casual","Male");
+INSERT INTO nike VALUES (12,"Dunks",200,11,"Casual","Male");
+INSERT INTO nike VALUES (13,"Kyrie", 160,7,"Sneakers","Female");
+INSERT INTO nike VALUES (14,"PG",140,9,"Basketball","Male");
+INSERT INTO nike VALUES (15,"Vans",45,10,"Casual","Female");
+
+
+SELECT shoes TEXT,price INTEGER,size INTEGER, category TEXT,sex TEXT
+FROM nike
+WHERE price > 65;

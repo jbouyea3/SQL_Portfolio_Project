@@ -1,0 +1,42 @@
+
+CREATE TABLE Famous_People (id INTEGER PRIMARY KEY,
+first_name TEXT,
+last_name TEXT,
+birthdate TEXT,
+occupation integer);
+
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Leonardo", "Dicaprio", "11-11-1974", 1);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Lebron", "James", "12-30-1984", 5);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Chris", "Brown", "05-05-1989", 3);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Bella", "Hadid", "10-09-1996", 4);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Kevin", "Hart", "07-06-1979", 1);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Ryan", "Reynolds", "10-23-1976", 1);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Odell", "Beckham Jr", "09-05-1992", 5);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Beyonce", "Knowles", "90-04-1981", 2);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Kendall", "Jenner", "11-03-1995", 4);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Simone", "Biles", "03-14-1997", 5);
+
+CREATE TABLE Profession (id INTEGER PRIMARY KEY,
+title TEXT);
+
+INSERT INTO Profession VALUES (1, "Actor");
+INSERT INTO Profession VALUES (2, "Musician");
+INSERT INTO Profession VALUES (3, "Dancer");
+INSERT INTO Profession VALUES (4, "Model");
+INSERT INTO Profession VALUES (5, "Athlete");
+
+
+SELECT first_name, last_name, title 
+FROM Famous_People
+JOIN Profession
+ON Famous_People.occupation = Profession.id

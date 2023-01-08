@@ -1,3 +1,4 @@
+-- CREATED A TABLE WITH THE NAMES, DOB, AND OCCUPATION
 
 CREATE TABLE Famous_People (id INTEGER PRIMARY KEY,
 first_name TEXT,
@@ -25,6 +26,36 @@ INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
 VALUES ("Kendall", "Jenner", "11-03-1995", 4);
 INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
 VALUES ("Simone", "Biles", "03-14-1997", 5);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Tom","Hanks","07-09-1956","Actor", 1);
+
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Kobe","Bryant","08-23-1978","Athlete", 5);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Madonna","Ciccone","08-16-1958","Musician", 2);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Usain","Bolt","08-21-1986","Athlete", 2);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Usain","Bolt","08-21-1986","Athlete", 5);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Cindy","Crawford","02-20-1966","Model", 4);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Michael","Jackson","08-29-1958","Musician", 2);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Tupac","Shakur","06-16-1971","Musician", 2);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Misty","Copeland","09-10-1982","Dancer", 3);
+
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Bruce","Lee","11-27-1940","Athlete", 5);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Gigi","Hadid","04-23-1995","Model", 3);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Misty","Copeland","09-10-1982","Dancer", 3);
+INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
+VALUES ("Misty","Copeland","09-10-1982","Dancer", 3);
+
+-- CREATED TABLE LINKING "Famous_People" OCCUPATION TO THE DESIGNATED VALUES
 
 CREATE TABLE Profession (id INTEGER PRIMARY KEY,
 title TEXT);
@@ -35,6 +66,7 @@ INSERT INTO Profession VALUES (3, "Dancer");
 INSERT INTO Profession VALUES (4, "Model");
 INSERT INTO Profession VALUES (5, "Athlete");
 
+-- LINKED TABLES USING JOIN TO SHOW THE OCCUPATION OF FAMOUS INDIVIDUALS
 
 SELECT first_name, last_name, title 
 FROM Famous_People

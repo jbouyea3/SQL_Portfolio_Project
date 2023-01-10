@@ -28,7 +28,6 @@ INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
 VALUES ("Simone", "Biles", "03-14-1997", 5);
 INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
 VALUES ("Tom","Hanks","07-09-1956","Actor", 1);
-
 INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
 VALUES ("Kobe","Bryant","08-23-1978","Athlete", 5);
 INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
@@ -45,7 +44,6 @@ INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
 VALUES ("Tupac","Shakur","06-16-1971","Musician", 2);
 INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
 VALUES ("Misty","Copeland","09-10-1982","Dancer", 3);
-
 INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
 VALUES ("Bruce","Lee","11-27-1940","Athlete", 5);
 INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
@@ -53,7 +51,8 @@ VALUES ("Gigi","Hadid","04-23-1995","Model", 3);
 INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
 VALUES ("Misty","Copeland","09-10-1982","Dancer", 3);
 INSERT INTO Famous_People (first_name, last_Name, birthdate, occupation)
-VALUES ("Misty","Copeland","09-10-1982","Dancer", 3);
+VALUES ("Misty","Copeland","09-10-1982","Dancer", 3); 
+
 
 -- CREATED TABLE LINKING "Famous_People" OCCUPATION TO THE DESIGNATED VALUES
 
@@ -65,6 +64,57 @@ INSERT INTO Profession VALUES (2, "Musician");
 INSERT INTO Profession VALUES (3, "Dancer");
 INSERT INTO Profession VALUES (4, "Model");
 INSERT INTO Profession VALUES (5, "Athlete");
+
+
+CREATE table hobbies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER,
+    name TEXT);
+INSERT INTO hobbies (person_id, name) VALUES (1, "singing");
+INSERT INTO hobbies (person_id, name) VALUES (2,"workingout");
+INSERT INTO hobbies (person_id, name) VALUES (3,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (4,"youtube");
+INSERT INTO hobbies (person_id, name) VALUES (5,"playing video games");
+INSERT INTO hobbies (person_id, name) VALUES (6,"career");
+INSERT INTO hobbies (person_id, name) VALUES (7, "partying");
+INSERT INTO hobbies (person_id, name) VALUES (8,"riding motorcycles");
+INSERT INTO hobbies (person_id, name) VALUES (9,"listening to music");
+INSERT INTO hobbies (person_id, name) VALUES (10,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (11,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (12,"his carrer");
+INSERT INTO hobbies (person_id, name) VALUES (13,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (14,"career");
+INSERT INTO hobbies (person_id, name) VALUES (15,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (16,"workingout");
+INSERT INTO hobbies (person_id, name) VALUES (17,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (18,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (19,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (20,"workingout");
+INSERT INTO hobbies (person_id, name) VALUES (21,"workingout");
+INSERT INTO hobbies (person_id, name) VALUES (22,"workingout");
+INSERT INTO hobbies (person_id, name) VALUES (23,"playing video games");
+INSERT INTO hobbies (person_id, name) VALUES (24,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (25,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (26,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (27,"partying");
+INSERT INTO hobbies (person_id, name) VALUES (28,"workingout");
+INSERT INTO hobbies (person_id, name) VALUES (29,"workingout");
+INSERT INTO hobbies (person_id, name) VALUES (30,"partying");
+INSERT INTO hobbies (person_id, name) VALUES (31,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (32,"partying");
+INSERT INTO hobbies (person_id, name) VALUES (33,"playing video games");
+INSERT INTO hobbies (person_id, name) VALUES (34,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (35,"partying");
+INSERT INTO hobbies (person_id, name) VALUES (36,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (37,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (38,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (39,"playing video games");
+INSERT INTO hobbies (person_id, name) VALUES (41,"workingout");
+INSERT INTO hobbies (person_id, name) VALUES (42,"partying");
+INSERT INTO hobbies (person_id, name) VALUES (43,"singing");
+INSERT INTO hobbies (person_id, name) VALUES (44,"partying");
+INSERT INTO hobbies (person_id, name) VALUES (45,"partying");
+INSERT INTO hobbies (person_id, name) VALUES (46,"playing video games");
 
 -- LINKED TABLES USING JOIN TO SHOW THE OCCUPATION OF FAMOUS INDIVIDUALS
 

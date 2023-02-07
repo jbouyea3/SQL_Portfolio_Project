@@ -99,5 +99,5 @@ AVG(TotalTimeInBed - TotalMinutesAsleep) as wasted_bed_time, day_of_week
 from sleepDay
 Group by day_of_week
 
-
+-- Data Visualization:
 https://public.tableau.com/app/profile/jonquis.d.bouyea/viz/BellaBeat_Google_Capstone_Project/BellabeatFitnessAnalysis

@@ -1,0 +1,93 @@
+/* What does the app's SQL look like? */
+
+CREATE table Subscriptions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT,
+    price INTEGER,
+    status TEXT);
+    
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("LinkedIn",43.29,"Cancelled");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("UxFolio",15.00,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("EOS",26.99,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("Apple",8.00,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("Rocket Money",5.00,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("Good Rx",10.00,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("Sallie Mae",160.89,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("AT&T",118.45,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("Avocademy",187.45,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("Spotify",10.00,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("Digit",5.00,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("Sculpt U",12.00,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("Bank of America",173.00,"Active");
+INSERT INTO Subscriptions (title, price, status) 
+    VALUES ("Discover",77.00,"Active");
+
+
+
+SELECT * FROM Subscriptions;
+
+UPDATE Subscriptions SET price = 5.89 
+    WHERE id = 11;
+    
+SELECT * FROM Subscriptions;
+
+ALTER TABLE Subscriptions ADD useful TEXT default "unknown";
+
+SELECT * FROM Subscriptions;
+
+BEGIN TRANSACTION;
+UPDATE Subscriptions SET price = 173.55 WHERE id = 13;
+UPDATE Subscriptions SET price = 15.99 WHERE id = 2;
+UPDATE Subscriptions SET price = 12.45 WHERE id = 12;
+UPDATE Subscriptions SET price = 77.01 WHERE id = 14;
+COMMIT;
+
+SELECT * FROM Subscriptions;
+
+BEGIN TRANSACTION;
+UPDATE Subscriptions SET useful = "yes" WHERE id = 13;
+UPDATE Subscriptions SET useful = "yes" WHERE id = 2;
+UPDATE Subscriptions SET useful = "yes" WHERE id = 10;
+UPDATE Subscriptions SET useful = "yes" WHERE id = 14;
+UPDATE Subscriptions SET useful = "no" WHERE id = 11;
+UPDATE Subscriptions SET useful = "unsure" WHERE id = 12;
+UPDATE Subscriptions SET useful = "yes" WHERE id = 9;
+UPDATE Subscriptions SET useful = "yes" WHERE id = 8;
+UPDATE Subscriptions SET useful = "yes" WHERE id = 7;
+UPDATE Subscriptions SET useful = "unsure" WHERE id = 6;
+UPDATE Subscriptions SET useful = "yes" WHERE id = 4;
+UPDATE Subscriptions SET useful = "no" WHERE id = 3;
+COMMIT;
+
+SELECT * 
+FROM Subscriptions;
+
+SELECT * 
+FROM Subscriptions 
+WHERE useful = "unknown";
+
+BEGIN TRANSACTION;
+UPDATE Subscriptions SET useful = "yes" WHERE id = 1;
+UPDATE Subscriptions SET useful = "unsure" WHERE id = 5;
+COMMIT;
+
+SELECT *
+FROM Subscriptions
+WHERE price > 75.00;
+
+DELETE FROM Subscriptions WHERE id = 11;
+
+SELECT * FROM Subscriptions

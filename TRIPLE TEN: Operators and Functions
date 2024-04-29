@@ -1,0 +1,54 @@
+--TRIPLE TEN SQL Coursework--
+
+--Operators and Functions for Working with Dates--
+
+/* Retrieve hours from the date field in the transactions table. Name the resulting field hours */
+
+SELECT 
+	 EXTRACT(HOUR FROM date) AS hours
+FROM
+    transactions;
+
+/* Retrieve hours from the date field of the transactions table. Name the resulting field hours. Then group the data by hours and find the number of goods (id_product)
+bought during each hour. Name the resulting variable cnt. Sort the results in ascending order by the value of the hours field. The columns should appear in this order: hours, cnt */
+
+SELECT 
+	 EXTRACT(HOUR FROM date) AS hours,
+    COUNT(id_product) AS cnt
+FROM
+    transactions
+ GROUP by
+    hours
+ORDER by
+    hours ASC;
+
+/* Retrieve days from the date column of the transactions table. Name the resulting field days. Then group the data by days and find the number of 
+goods (id_product) bought on each day. Name the resulting variable cnt. Sort the results in ascending order by days. The columns should appear in this order: days, cnt */
+
+
+SELECT  
+	 EXTRACT(DAY FROM date) AS days,
+    COUNT(id_product) AS cnt
+FROM
+    transactions
+ GROUP by
+    days
+ORDER by
+    days ASC;
+
+
+/* You've determined that the most purchases took place on the first day of the month. Truncate the date from the date field to the day level and name the variable date_month. 
+Group the data by truncated date and find the number of goods (id_product) bought on each day. Name the resulting variable cnt. Sort the results in ascending order by date_month. 
+The columns should appear in this order: date_month, cnt */
+
+Select
+    DATE_TRUNC('day', date) AS date_month,
+    COUNT(id_product) AS cnt
+FROM 
+    transactions
+GROUP BY 
+    DATE_TRUNC('day', date)
+ORDER BY 
+    date_month ASC;
+
+
